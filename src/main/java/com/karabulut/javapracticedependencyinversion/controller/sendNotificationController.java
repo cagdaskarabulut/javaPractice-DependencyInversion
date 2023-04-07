@@ -15,11 +15,12 @@ public class sendNotificationController {
 
     private final List<MessageService> services;
 
-    @RequestMapping("/")
+    @GetMapping("/")
     public String sendNotification(){
+        String result = "";
         for (MessageService service : services){
-            service.sendMessage();
+            result += service.sendMessage() + "<br>";
         }
-        return "Gonderildi Mesaj1";
+        return result;
     }
 }

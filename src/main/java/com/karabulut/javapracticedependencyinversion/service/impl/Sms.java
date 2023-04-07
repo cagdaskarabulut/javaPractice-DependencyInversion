@@ -7,11 +7,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class Sms implements MessageService {
     @Override
-    public void sendMessage(){
-        sendSms();
+    public String sendMessage(){
+        return sendSms();
     }
 
-    private void sendSms() {
-        System.out.println("Sms gönderildi");
+    private String sendSms() {
+        String result = "Sms gönderildi";
+        System.out.println(result);
+        return result;
     }
 }

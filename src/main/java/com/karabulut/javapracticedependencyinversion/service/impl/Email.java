@@ -6,11 +6,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class Email implements MessageService {
     @Override
-    public void sendMessage() {
-        sendEmail();
+    public String sendMessage() {
+        return sendEmail();
     }
 
-    private void sendEmail() {
-        System.out.println("Mail gönderildi");
+    private String sendEmail() {
+        String result = "Mail gönderildi";
+        System.out.println(result);
+        return result;
     }
 }
